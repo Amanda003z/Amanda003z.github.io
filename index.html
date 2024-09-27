@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="noarchive" content="noarchive">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="fotos/icon.png">
-    <title>BATMAN</title>
+    <link rel="icon" href="images/icon.png">
+    <title>Batman</title>
 </head>
 <body>
     <header class="header">
         <div class="header_logo-container">
-            <img class="header_logo" src="fotos/logo.png">
+            <img class="header_logo" src="images/logo.png">
         </div>
-
-        <input type="checkbox" class="header_checkbox" id="open-menu">
-        <label for="open-menu" class="header_nav-button" role="button">=</label>
+ 
+        <input type="checkbox" class="header_checkbox" id="checkbox">
+        <label class="header_nav-button" role="button" for="checkbox">=</label>
 
         <nav class="header_nav">
             <ul class="header_nav-list">
@@ -29,7 +30,7 @@
     <main class="information">
         <div class="information_wrapper">
             <div class="information_image-container">
-                <img class="information_img" src="fotos/batman.jpg" alt="batman_photo">
+                <img class="information_img" src="images/batman.jpg" alt="batman_photo">
             </div>
 
             <div class="information_data-container" id="about">
@@ -119,27 +120,27 @@
                 </label>
             </div>
 
-            <div class="form_pass-gender">
-                <div class="form_input">
-                    <label> Password:
-                        <input type="text" placeholder="Batman123...">
-                    </label>
-                </div>
-    
+            <div class="form_input">
+                <label> Password:
+                    <input type="text" placeholder="Batman123...">
+                </label>
+            </div>
+
+            <div class="form_email-gender">
                 <div class="form_input">
                     <label> Gender
                         <select name="gender" class="input-gender">
-                            <option value="M" class="gender-option">Batman's</option>
-                            <option value="F" class="gender-option">Catwoman's</option>
+                            <option value="M">Batman's</option>
+                            <option value="F">Batwoman's</option>
                         </select>
                     </label>
                 </div>
-            </div>
 
-            <div class="form_input">
-                <label> Email:
-                    <input type="email" placeholder="ilovebatman@gmail.com...">
-                </label>
+                <div class="form_input">
+                    <label> Email:
+                        <input type="email" placeholder="ilovebatman@gmail.com...">
+                    </label>
+                </div>
             </div>
 
             <div class="form_input">
