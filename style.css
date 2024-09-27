@@ -21,6 +21,7 @@ body, ul, nav, header, footer, a, li, label, h1, h2, p {
 /* ---------------->>> HEADER SECTION <<<--------------- */
 
 .header {
+    user-select: none;
     container-type: inline-size;
     container-name: header;
 
@@ -268,11 +269,16 @@ body, ul, nav, header, footer, a, li, label, h1, h2, p {
     .information_data-container {
         margin: auto;
     }
+
+    .information_data-container p {
+        text-align: justify;
+    }
 }
 
 /* ---------------->>> MEDIA SECTION <<<--------------- */
 
 .media {
+    user-select: none;
     container-type: inline-size;
     container-name: media;
 
@@ -362,6 +368,8 @@ body, ul, nav, header, footer, a, li, label, h1, h2, p {
 }
 
 .join h2 {
+    user-select: none;
+
     padding: 8px 17px;
     font-size: 1.3em;
 }
@@ -376,12 +384,14 @@ body, ul, nav, header, footer, a, li, label, h1, h2, p {
 }
 
 .form_input > label {
+    user-select: none;
+    
     margin-left: 12px;
     color: var(--main-color);
     font-style: italic;
 }
 
-.form_input :is(input, textarea) {
+.form_input :is(input, textarea, .input-gender) {
     width: 100%;
     margin-top: 4px;
     margin-bottom: 10px;
@@ -397,9 +407,13 @@ body, ul, nav, header, footer, a, li, label, h1, h2, p {
     transition: 0.3s background-color;
 }
 
-input:hover:not(.button),textarea:hover {
-    background-color: var(--main-color);
-    color: var(--light-color);
+.form_pass-gender {
+    display: flex;
+    gap: 14px;
+}
+
+.input-gender {
+    outline: none;
 }
 
 .form_input .textarea {
@@ -418,6 +432,11 @@ input:hover:not(.button),textarea:hover {
     letter-spacing: 1px;
 }
 
+input:hover:not(.button), textarea:hover, .input-gender:hover {
+    background-color: var(--main-color);
+    color: var(--light-color);
+}
+
 .button:hover {
     opacity: 0.6;
 }
@@ -428,30 +447,34 @@ input:hover:not(.button),textarea:hover {
     .join_form {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
-        "name email"
-        "password password"
+        "name pass-gender"
+        "email email"
         "message message"
         "button button";
         gap: 12px;
     }
 
-    .form_input:first-child {
+    .form_input {
+        width: 100%;
+    }
+
+    .form_input:first-child{
         grid-area: name;
     }
 
-    .form_input:nth-child(3) {
-        grid-area: email;
+    .pass-gender:first-child {
+        grid-area: pass-gender;
     }
 
-    .form_input:nth-child(2) {
-        grid-area: password;
+    .form_input:nth-child(3){
+        grid-area: email;
     }
 
     .form_input:nth-child(4) {
         grid-area: message;
     }
 
-    .form_input:nth-child(5) {
+    .form_input:last-child {
         grid-area: button;
     }
 }
